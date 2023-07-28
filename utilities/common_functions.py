@@ -1,5 +1,6 @@
 import os
 import datetime
+import matplotlib.pyplot as matplot
 
 def form_values_string(string):
     result = "("+string+")"
@@ -34,3 +35,7 @@ def set_output_file_name():
 def open_file(file_path_and_name):
     output_file = open(file_path_and_name,"a+")
     return output_file
+
+def generate_plot(figure_num, title):
+    matplot.figure(figure_num)
+    matplot.title(title)
